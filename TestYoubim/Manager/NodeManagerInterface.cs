@@ -7,12 +7,12 @@ namespace TestYoubim.Manager
 {
     interface NodeManagerInterface
     {
-        Node getById(Guid id);
+        Node GetById(Guid id);
 
-        IList<Node> getAll();
-        Node create(string idUser, string name, string versionFile);
-        bool delete(Guid id);
-        Node edit(Guid id, Node node);
+        IList<Node> GetAll();
+        Node Create(string idUser, string name, string versionFile);
+        bool Delete(Guid id);
+        Node Edit(Guid id, Node node);
 
     }
 }

@@ -14,35 +14,35 @@ namespace TestYoubim.Manager
         {
             this._nodeRepo = nodeRepo;
         }
-        public Node getById(Guid nodeId)
+        public Node GetById(Guid nodeId)
         {
             return this._nodeRepo.GetNodeById(nodeId);
         }
 
-        public IList<Node> getAll()
+        public IList<Node> GetAll()
         {
-            return this._nodeRepo.getAllNodes();
+            return this._nodeRepo.GetAllNodes();
         }
 
-        public Node create(string idUser, string name, string versionFile)
+        public Node Create(string idUser, string name, string versionFile)
         {
             Node newNode = new Node();
             newNode.Id = Guid.NewGuid();
             newNode.IdUser = idUser;
             newNode.Name = name;
             newNode.VersionFile = versionFile;
-            return this._nodeRepo.createNode(newNode);
+            return this._nodeRepo.CreateNode(newNode);
         }
 
-        public bool delete(Guid id)
+        public bool Delete(Guid id)
         {
-            Node node = this.getById(id);
-            return this._nodeRepo.deleteNode(node);
+            Node node = this.GetById(id);
+            return this._nodeRepo.DeleteNode(node);
         }
 
-        public Node edit(Guid id, Node node)
+        public Node Edit(Guid id, Node node)
         {
-            return this._nodeRepo.editNode(node); ;
+            return this._nodeRepo.EditNode(node); ;
         }
     }
 }

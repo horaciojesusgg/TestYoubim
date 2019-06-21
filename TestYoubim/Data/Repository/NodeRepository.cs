@@ -22,7 +22,7 @@ namespace TestYoubim.Data.Repository
             return node;
         }
 
-        public Node createNode(Node newNode)
+        public Node CreateNode(Node newNode)
         {
             try
             {
@@ -31,16 +31,16 @@ namespace TestYoubim.Data.Repository
                 return newNode;
             } catch (Exception e)
             {
-                throw new Exception("Error while new Node in the database.");
+                throw new Exception("Error while new Node in the database." + e.Message);
             }
         }
 
-        public IList<Node> getAllNodes()
+        public IList<Node> GetAllNodes()
         {
             return this._nodeContext.Node.ToList();
         }
 
-        public Node editNode(Node node)
+        public Node EditNode(Node node)
         {
             this._nodeContext.Entry(node).State = EntityState.Modified;
             try
@@ -49,11 +49,11 @@ namespace TestYoubim.Data.Repository
                 return node;
             } catch (Exception e)
             {
-                throw new Exception("Error while editing the node.");
+                throw new Exception("Error while editing the node." + e.Message);
             }
         }
 
-        public bool deleteNode(Node node)
+        public bool DeleteNode(Node node)
         {
             try {
                 this._nodeContext.Node.Remove(node);

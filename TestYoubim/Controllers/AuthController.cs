@@ -86,43 +86,5 @@ namespace TestYoubim.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
-
-        [HttpGet]
-        public IActionResult GetAll()
-        {
-            var users = _userService.GetAll();
-            return Ok(users);
-        }
-
-        [HttpGet("{id}")]
-        public IActionResult GetById(Guid id)
-        {
-            var user = _userService.GetById(id);
-            return Ok(user);
-        }
-
-        [HttpPut("{id}")]
-        public IActionResult Update(Guid id, [FromBody]User user)
-        {
-            user.Id = id;
-            try
-            {
-                // save 
-                _userService.Update(user, user.PlainPassword);
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                // return error message if there was an exception
-                return BadRequest(new { message = ex.Message });
-            }
-        }
-
-        [HttpDelete("{id}")]
-        public IActionResult Delete(Guid id)
-        {
-            _userService.Delete(id);
-            return Ok();
-        }
     }
 }
