@@ -1,0 +1,14 @@
+C:\Users\Horacio\source\repos\TestYoubim\TestYoubim\bin\Debug\netcoreapp2.1\TestYoubim.deps.json
+C:\Users\Horacio\source\repos\TestYoubim\TestYoubim\bin\Debug\netcoreapp2.1\TestYoubim.runtimeconfig.json
+C:\Users\Horacio\source\repos\TestYoubim\TestYoubim\bin\Debug\netcoreapp2.1\TestYoubim.runtimeconfig.dev.json
+C:\Users\Horacio\source\repos\TestYoubim\TestYoubim\bin\Debug\netcoreapp2.1\TestYoubim.dll
+C:\Users\Horacio\source\repos\TestYoubim\TestYoubim\bin\Debug\netcoreapp2.1\TestYoubim.pdb
+C:\Users\Horacio\source\repos\TestYoubim\TestYoubim\obj\Debug\netcoreapp2.1\TestYoubim.csprojAssemblyReference.cache
+C:\Users\Horacio\source\repos\TestYoubim\TestYoubim\obj\Debug\netcoreapp2.1\TestYoubim.csproj.CoreCompileInputs.cache
+C:\Users\Horacio\source\repos\TestYoubim\TestYoubim\obj\Debug\netcoreapp2.1\TestYoubim.RazorAssemblyInfo.cache
+C:\Users\Horacio\source\repos\TestYoubim\TestYoubim\obj\Debug\netcoreapp2.1\TestYoubim.RazorAssemblyInfo.cs
+C:\Users\Horacio\source\repos\TestYoubim\TestYoubim\obj\Debug\netcoreapp2.1\TestYoubim.AssemblyInfoInputs.cache
+C:\Users\Horacio\source\repos\TestYoubim\TestYoubim\obj\Debug\netcoreapp2.1\TestYoubim.AssemblyInfo.cs
+C:\Users\Horacio\source\repos\TestYoubim\TestYoubim\obj\Debug\netcoreapp2.1\TestYoubim.RazorTargetAssemblyInfo.cache
+C:\Users\Horacio\source\repos\TestYoubim\TestYoubim\obj\Debug\netcoreapp2.1\TestYoubim.dll
+C:\Users\Horacio\source\repos\TestYoubim\TestYoubim\obj\Debug\netcoreapp2.1\TestYoubim.pdb

@@ -1,0 +1,90 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 pt-3">
+        <ngb-alert *ngIf="successMessage" type="success" (close)="successMessage = null">{{ successMessage }}</ngb-alert>
+      </div>
+        <div class="col-md-12 pt-2 pb-2">
+          <button (click)="open(content)" class="btn btn-success">Create +</button>
+        </div>
+        <div class="col-md-12">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">User Id</th>
+                  <th scope="col">Version File</th>
+                  <th scope="col">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let node of nodes; index as i">
+                  <th scope="row">{{ i + 1 }}</th>
+                  <td>
+                    {{ node.name }}
+                  </td>
+                  <td>{{ node.idUser }}</td>
+                  <td>{{ node.versionFile}}</td>
+                  <td>
+                    <button (click)="open(editModal, node)" class="btn btn-primary">Edit</button>
+                    <button (click)="deleteNode(node.id)" class="btn btn-danger">Delete</button>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+        </div>
+      </div>
+</div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Create Node</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <div class="d-flex">
+            <label for="nodeName">Node Name:</label>
+            <input id="nodeName" [(ngModel)]="newNodeName" [ngModelOptions]="{standalone: true}" class="form-control" type="text"/>
+          </div>
+          <div class="d-flex">
+              <label for="nodeName">Version File:</label>
+              <input id="nodeName"  [(ngModel)]="newNodeVersionFile" [ngModelOptions]="{standalone: true}" class="form-control" type="text"/>
+            </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="createNode()">Save</button>
+    </div>
+  </ng-template>
+
+
+  <ng-template #editModal let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Edit Node</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <div class="d-flex">
+              <label for="nodeName">Node Name:</label>
+              <input id="nodeName" [(ngModel)]="editingNode.name" [ngModelOptions]="{standalone: true}" class="form-control" type="text"/>
+            </div>
+            <div class="d-flex">
+                <label for="nodeName">Version File:</label>
+                <input id="nodeName"  [(ngModel)]="editingNode.versionFile" [ngModelOptions]="{standalone: true}" class="form-control" type="text"/>
+              </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="editNode()">Save</button>
+      </div>
+    </ng-template>
